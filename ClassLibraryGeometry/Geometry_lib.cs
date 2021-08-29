@@ -56,5 +56,11 @@ namespace ClassLibraryGeometry
                 return false;
             }
         }
+        public static double Sfigure(int[] arr)
+        {
+           
+            double s = 0;
+            return s;
+        }
     }
 }

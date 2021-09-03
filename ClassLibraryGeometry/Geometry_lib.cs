@@ -4,19 +4,19 @@ namespace ClassLibraryGeometry
 {
     public class Geometry_lib
     {
-        public static double Sfigure(double radius) //calculates the area of a circle by radius
+        public static double Sfigure(double radius) //площадь круга по радиусу
         {
             const double PI = 3.141;
             double s = PI * (radius * radius);
             return s;
         }
-        public static double Sfigure(double a, double b, double c) //calculates the area of a triangle on 3 sides
+        public static double Sfigure(double a, double b, double c) //площадь треугольника по 3 сторонам
         {
             double P = (a + b + c) / 2;
             double s = Math.Sqrt(P * (P - a) * (P - b) * (P - c));
             return s;
         }
-        public static bool Check_triangle(double a, double b, double c)
+        public static bool Check_triangle(double a, double b, double c) //проверка треуголника на прямоугольность
         {
             int count = 0;
             for (int i = 0; i < 3; i++)

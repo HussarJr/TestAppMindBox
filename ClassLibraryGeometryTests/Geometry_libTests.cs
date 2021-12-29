@@ -12,27 +12,38 @@ namespace ClassLibraryGeometry.Tests
     public class Geometry_libTests
     {
         [TestMethod()]
-        public void SfigureTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
         public void SfigureTest1()
         {
-            Assert.Fail();
+            double r = 10.0;
+            double expected = 314.1;
+
+            Geometry_lib geometry_Lib = new Geometry_lib();
+            double actual = geometry_Lib.Sfigure(r);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod()]
+        public void SfigureTest2()
+        {
+            double a = 3, b = 4, c = 5;
+            double expected = 6.0;
+
+            Geometry_lib geometry_Lib = new Geometry_lib();
+            double actual = geometry_Lib.Sfigure(a, b, c);
+            Assert.AreEqual(expected, actual);
+
+
         }
 
         [TestMethod()]
         public void Check_triangleTest()
         {
-            Assert.Fail();
-        }
+            double a = 3, b = 4, c = 5;
+            bool expected = true;
 
-        [TestMethod()]
-        public void SfigureTest2()
-        {
-            Assert.Fail();
+            Geometry_lib geometry_Lib = new Geometry_lib();
+            bool actual = geometry_Lib.Check_triangle(a,b,c);
+            Assert.AreEqual(expected, actual);
         }
     }
 }
